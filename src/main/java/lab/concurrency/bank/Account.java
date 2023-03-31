@@ -10,7 +10,7 @@ public class Account {
 
     public void deposit(int value){
 
-        amount=amount+value;
+        amount=amount+value; // 1 operacja read, 2 oper calculate, 3 oper assign
     }
 
     public  void withdraw(int value){

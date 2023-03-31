@@ -1,6 +1,9 @@
 package lab.concurrency.alarm;
 
-public abstract class Alarm extends Thread{
+import java.util.Random;
+import java.util.concurrent.Callable;
+
+public abstract class Alarm implements Callable<Boolean> {
 
     public void alarm(){
 
@@ -10,7 +13,8 @@ public abstract class Alarm extends Thread{
     protected abstract void specificAlarm();
 
     @Override
-    public void run() {
+    public Boolean call() {
         alarm();
+        return new Random().nextBoolean();
     }
 }

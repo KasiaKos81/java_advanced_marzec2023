@@ -15,5 +15,6 @@ public class WithdrawTask {
                 System.out.println("withdraw:" + account.getAmount());
             }
         }
+        System.out.println("after withdraw" + account.getAmount());
     }
 }
