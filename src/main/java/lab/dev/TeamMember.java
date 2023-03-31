@@ -1,5 +1,8 @@
 package lab.dev;
 
+import lab.dynamic.DefaultValue;
+import lombok.Value;
+
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -7,6 +10,7 @@ import java.util.Set;
 
 public final class TeamMember {
 
+    @DefaultValue("Zdzisiek")
     private String name;
     private Set<Skill> skills = new HashSet<>();
     private Set<Role> roles = new HashSet<>();

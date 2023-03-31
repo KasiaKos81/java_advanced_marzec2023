@@ -48,7 +48,7 @@ public class ReflectMain {
 //                        }
 //                    });
 
-            ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+            ValidatorFactory factory = Validation.buildDefaultValidatorFactory(); // to jest z hibernate
             Validator validator = factory.getValidator();
             Set<ConstraintViolation<Animal>> violations = validator.validate(a);
             System.out.println("violations " + violations);

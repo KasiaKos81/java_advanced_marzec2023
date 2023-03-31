@@ -43,6 +43,18 @@ public class SetterMain {
                     System.out.println("field " + field.getName() + " found " + found);
                 }
             }
+             if (!found) {
+                 field.setAccessible(true);
+                 Object value = field.get(tm);
+                 if(value==null)
+                     System.out.println("field " + field.getName() + " found " + found);
+                 DefaultValue defaultValue = field.getAnnotation(DefaultValue.class);
+                 if(defaultValue!=null) {
+                     System.out.println("Default value is detected");
+                     field.set(tm, defaultValue.value());
+                 }
+                 }
+
         }
 
     }
